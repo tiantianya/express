@@ -10,7 +10,8 @@ body{min-width: 1200px; background: #fff;}
 	background: url(http://002.sfimg.cn/web/d533ad01/d533ad01fea828bfba7df7338b48d193.jpg) center top no-repeat;
     display: block;
     width: 100%;
-    height: 80px;
+	height: 80px;
+	transition: all 0.9s;
 }
 .top .banner a{
     width: 1200px;
@@ -868,6 +869,7 @@ body{min-width: 1200px; background: #fff;}
 	width: 100%;
 	height: 480px;
 	position: relative;
+	z-index:29px;
 }
 .show .show1{
 	width: 1200px;
@@ -954,8 +956,8 @@ body{min-width: 1200px; background: #fff;}
 	background-color: #fa9600;
 	cursor: default;
 }
-.bg{
-	width: 100%;
+.show .bg{
+	width: 1349px;
 	height: 480px;
 	position: absolute;
 	z-index: 0;
@@ -974,6 +976,540 @@ body{min-width: 1200px; background: #fff;}
 	height: 480px;
 	float: left;
 }
-
-
-
+/**********************************buy1**************************************/
+.mustbuy{
+	width: 1200px;
+	margin: 0 auto;
+}
+.buy1{
+	margin-top: 35px;
+}
+.bestbuy{
+	width: 1190px;
+	float: right;
+}
+.bestbuy .mustbuy_left{
+	widows: 945px;
+	float: left;
+	display: block;
+	overflow: hidden;
+}
+.bestbuy h2{
+	color: #333333;
+    font-weight: normal;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    padding: 0 0 12px 3px;
+}
+.bestbuy h2 span{
+	display: inline-block;
+	width: 118px;
+	height: 14px;
+	margin: 0 0 0 5px;
+	overflow: hidden;
+	background: url(http://i.sfimg.cn/html/images/index_icon_new.png) -29px -333px no-repeat;
+}
+.bestbuy .must{
+	display: block;
+	width: 944px;
+	border-left: 1px solid #e8e8e8;
+	border-top: 1px solid #e8e8e8;
+	float: left;
+}
+.bestbuy .must li{
+	position: relative;
+    height: 258px;
+    float: left;
+    border-right: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    overflow: hidden;
+    width: 235px;
+}
+.a_buy {
+    font-size: 14px;
+    color: #323232;
+    display: inline-block;
+    margin-left: 12px;
+	height: 24px;
+	line-height: 14px;
+    overflow: hidden;
+    font-family: 微软雅黑;
+    padding-top: 10px;
+}
+.must_price{
+	font-size: 16px;
+	color: #f33f00;
+	height: 26px;
+	line-height: 16px;
+	padding-top: 10px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	overflow: hidden;
+	margin-left: 12px;
+}
+.must_price i{
+	font-size: 12px;
+	font-style: normal;
+}
+.bestbuy .must li img{
+	width: 204px;
+	height: 204px;
+	float: right;
+	margin-top: 4px;
+}
+.bestbuy .must li .lazy{
+	background: url(http://i.sfimg.cn/html/images/g_loading.png) 50% 50% no-repeat;
+}
+.gBtn{
+	position: absolute;
+	top: 260px;
+	width: 160px;
+	height: 24px;
+	border-radius: 2px;
+	background: #76ac25;
+	opacity: 0.95;
+	cursor: pointer;
+	z-index: 4;
+}
+.bbtn{
+	left: 0;
+	margin-left: 38px;
+}
+.gBtn a{
+	width: 80px;
+	height: 24px;
+	line-height: 24px;
+	display: block;
+	margin: 0 auto;
+	font-family: Microsoft YaHei;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+	padding-left: 20px;
+	background: url(http://i.sfimg.cn/html/images/indexsprite.png) -66px -177px no-repeat;
+}
+.list0:hover .gBtn{
+	top: 225px;
+	transition: 0.3s;
+}
+.dietitian{
+	margin-top: 26px;
+	float: right;
+	border: 1px solid #e8e8e8;
+	width: 224px;
+	height: 519px;
+	overflow: hidden;
+    font-family: Microsoft YaHei;
+}
+.dietitian-img{
+	width: 222px;
+	height: 300px;
+	text-align: center;
+	overflow: hidden;
+}
+.dietitian img{
+	width: 220px;
+	height: 300px;
+}
+.dietitian-news{
+	width: 202px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.d-title{
+	height: 39px;
+	line-height: 14px;
+	border-bottom: 1px dotted #dbdbdb;
+	overflow: hidden;
+	padding: 15px 0 10px 0;
+}
+.d-title h2{
+	color: #323232;
+	font-size: 14px;
+    font-family: Microsoft YaHei;
+    float: left;
+	font-weight: normal;
+	padding: 0;
+}
+.dietitian-news .more{
+	color: #969696;
+	text-decoration: none;
+	display: block;
+	float: right;
+	padding-top: 2px;
+}
+.dietitian-news .more:hover{
+	color: #669900;
+}
+.dietitian-news ul{
+	margin: 8px auto;
+	height: 156px;
+	overflow: hidden;
+}
+.dietitian-news li{
+	height: 26px;
+	line-height: 26px;
+	overflow: hidden;
+}
+.dietitian-news li .red{
+	color: #fa6400;
+}
+.dietitian-news li a{
+	color: #666;
+}
+.dietitian-news li:hover a{
+	color: #669900;
+}
+.dietitian-news li:hover .red{
+	color: #fa6400;
+	text-decoration: underline;
+}
+/***************************** buy2 ********************************/
+.buy2{
+	margin-top: 30px;
+}
+.timebuy {
+    background: #FFECBF;
+    width: 945px;
+	float: left;
+	background: #fff;
+	height: 360px;
+	padding-left:10px;
+}
+.timebuy .ttop{
+	font-size: 24px;
+    font-family: Microsoft YaHei;
+    color: #FA6400;
+    height: 65px;
+    line-height: 28px;
+	background: #ff7031;
+	padding: 16px 0 16px 20px;
+	border-top: 1px solid #e5e5e5;
+}
+.timebuy .ttop span {
+	float: left;
+    width: 31px;
+    height: 34px;
+	background: url(http://i.sfimg.cn/html/images/paid/paid_bg.png) -39px -266px no-repeat;
+	margin: -5px 0 0 12px;
+}
+.timebuy .ttop p {
+    float: left;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+.ttop .t-title{
+	font-size: 24px;
+	color: #fff;
+	margin-top: -2px;
+    width: 111px;
+    height: 28px;
+}
+.timebuy .ttop .t-start{
+	font-size: 12px;
+	color: #ffe4c6;
+	padding: 0 10px 0 10px;
+}
+.ttop .t-end{
+	font-size: 12px;
+	color: #ffe4c6;
+	padding: 0 0px 0 0px;
+}
+.timebuy .ttop ul li{
+	background: url(http://i.sfimg.cn/html/images/paid/paid_bg.png) -185px -217px no-repeat;
+    width: 38px;
+    height: 40px;
+    color: #fff;
+	font-size: 26px;
+	font-weight: bold;
+	font-family: "宋体";
+	display: block;
+	float: left;
+	text-align: center;
+	margin: -6px 2px 0 0;
+    line-height: 40px;
+}
+.timebuy .ttop .no {
+    background: none;
+    color: #ffe4c6;
+    width: 33px;
+    font-size: 12px;
+    font-family: 微软雅黑;
+    font-weight: normal;
+}
+.timebuy .ttop .t-right {
+    float: right;
+    width: 100px;
+    height: 28px;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+    font-weight: bold;
+    vertical-align: text-top;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.timebuy .ttop .t-right a{
+	display: block;
+	font-size: 18px;
+	font-weight: normal;
+	color: #fff;
+	margin-top: 0;
+	background: none;
+	width: 100px;
+}
+.timebuy .tlist{
+	margin: 0;
+	border: 1px solid #e5e5e5;
+	border-top: none;
+}
+.tlist li{
+	width: 185px;
+	padding: 13px 0 18px 19px;
+	border-right: none;
+	float: left;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+}
+.pImg{
+	width: 160px;
+	height: 160px;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.pImg a{
+	position: relative;
+	display: block;
+	color: #666;
+}
+.tlist li img{
+	border: 1px solid #eee;
+	width: 164px;
+	height: 164px;
+	margin-bottom: 20px;
+	position: absolute;
+}
+.tlist .t-title{
+	height: 18px;
+	line-height: 18px;
+	overflow: hidden;
+}
+.title-t a{
+	color: #323232;
+	font-size: 12px;
+}
+.pt-price{
+	padding-top: 1px;
+	font-weight: 700;
+}
+.pt-price .p1{
+	color: #f33f00;
+    font-size: 14px;
+    font-family: 微软雅黑;
+}
+.pt-price .f1{
+	float: left;
+}
+.price{
+	color: #2d2d2d;
+	height: 22px;
+	line-height: 22px;
+	overflow: hidden;
+}
+.price b{
+	float: none;
+    font-weight: 700;
+    color: #f33f00;
+	font-size: 14px;
+	font-family: Microsoft YaHei;
+	width: 55px;
+	overflow: hidden;
+}
+.rush{
+	display: block;
+    color: #fff;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #ff7031;
+    margin-top: 6px;
+    font-family: 微软雅黑;
+}
+.super{
+	width: 222px;
+	height: 330px;
+	float: right;
+	margin-left: 24px;
+	overflow: hidden;
+}
+.super img{
+	width: 222px;
+	height: 330px;
+}
+/******************************** 食物楼层food **************************/
+.food{
+	padding-left: 10px;
+	width: 1200px;
+	text-align: right;
+}
+.food img{
+	width: 1190px;
+	height: 100px;
+}
+.category{
+	float: left;
+	width: 250px;
+	overflow: hidden;
+	/* padding-left: 10px; */
+}
+.category .mtitle{
+	width: 240px;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	color: #fff;
+	background: #76ac25;
+	border-top-left-radius:5px;
+	vertical-align: middle; 
+	margin-left: 10px;
+}
+.mtitle em {
+    background: url(http://i.sfimg.cn/html/images/index_icon_new.png) no-repeat -97px -295px;
+    width: 15px;
+    height: 16px;
+    float: left;
+    margin: 16px 8px 0 75px;
+}
+.mtitle a{
+	display: inline-block;
+	width: 32px;
+	height: 17px;
+	margin-right: 5px;
+	color: #fff;
+	font-size: 16px;
+}
+.category .picture{
+	width: 250px;
+	height: 420px;
+	overflow: hidden;
+	padding: 0;
+	float: left;
+}
+.picture img{
+	display: inline-block;
+	width: 250px;
+	height: 420px;
+	overflow: hidden;
+}
+.foodright{
+	float: left;
+	width: 950px;
+	position: relative;
+	border-top: 1px solid #adcd7c;
+}
+.foodright .subcont{
+	padding: 7px 10px 9px 10px;
+    width: 730px;
+    border-bottom: 1px solid #F4F4F4;
+    float: left;
+}
+.tlist li{
+	width: 176px;
+    padding: 8px;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.p-btn{
+	top: 161px;
+	transition: all 0.3s;
+}
+.p-btn a{
+	color: #fff;
+}
+.tlist li:hover .p-btn{
+	top: 136px;
+}
+.price-a{
+	font-size: 16px;
+    color: #f33f00;
+    height: 26px;
+    padding-top: 10px;
+    font-family: 微软雅黑;
+    margin-left: 12px;
+    line-height: 16px;
+    overflow: hidden;
+    font-weight: bold;
+}
+.price-f {
+    font-size: 14px;
+    margin-left: 0;
+    padding-top: 6px;
+}
+.price-f i{
+	font-size: 12px;
+	font-style: normal;
+}
+.foodright .redge{
+	width: 220px;
+	height: 469px;
+	float: left;
+	background: #f4f4f4;
+	overflow: hidden;
+}
+.foodright .rhot{
+	height: 189px;
+	overflow: hidden;
+	margin: 25px 0 0 15px;
+}
+.foodright .rhot li{
+	border-radius: 50%;
+	margin: 4px;
+	width: 55px;
+	height: 55px;
+	text-align: center;
+	line-height: 55px;
+	float: left;
+	background: url(http://i.sfimg.cn/html/images/index_icon_new.png) no-repeat;
+}
+.foodright .rhot li:hover a{
+	background: none;
+	background-color: #669900;
+	color: #fff;
+}
+.foodright .rhot li a{
+	border-radius: 50%;
+	color: #333;
+	width: 55px;
+	height: 55px;
+	display: block;
+	font-size: 12px;
+	overflow: hidden;
+}
+.foodright .rimg{
+	margin-top: 25px;
+}
+.foodright .rimg img{
+	display: inline;
+	width: 220px;
+	height: 230px;
+}
+.foodright .rimg .rbutton{
+	margin: -166px 0 0 15px;
+    background: url(http://i.sfimg.cn/html/images/index_icon_new.png) no-repeat -204px 0px;
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+.foodright .rimg .rbutton a{
+	display: block;
+	width: 25px;
+	height: 25px;
+	color: #666;
+}
+.foodright .rimg:hover .rbutton{
+	background: url(http://i.sfimg.cn/html/images/index_icon_new.png) no-repeat -204px -33px;
+}

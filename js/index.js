@@ -1,10 +1,9 @@
 // *****************顶部点击事件****************
 var oTopclose = document.getElementById("topclose");
 var oTopmenu = document.getElementById("topmenu");
+var oBan = document.getElementById("banner");
 oTopclose.onclick = function(){
-    // $("#topmenu").animate({ top: "-300px" }, 200);
-    console.log(1);
-    // oTopmenu.style.op = 0 +"px";
+    oBan.style.height = "0";
 }
 //*********************轮播图***************
 function Banner(){}
@@ -115,11 +114,30 @@ banner.init({
     wrap:"#slider-wrap",
     btn:"#anniu"
 })
-//*****************美食底部背景颜色***********************
-//var banner1= new Banner();
-//banner1.autoPlay();
-//banner1.init({
-//  item_list : "#bg li",
-//  ul : "#bg ul"
-////  btn_list:".anniu i"
-//})
+//***********************************倒计时********************************************
+var d2 = new Date("2018/10/17 17:41:00")
+// 截止的事件;
+function time(){
+    var d =new Date() 
+    var  a = (d2.getTime()-d.getTime()) / 1000;
+    if(a > 0){
+        var nhour1 = parseInt(((a / (60*60)) % 24) / 10);
+        var nhour2 = parseInt(((a / (60*60)) % 24) % 10);
+        var nmin1 = parseInt(((a / 60) % 60) / 10);
+        var nmin2 = parseInt(((a / 60) % 60) % 10);
+        var nsecond1 = parseInt((a % 60) / 10);
+        var nsecond2 = parseInt((a % 60) % 10);
+        hour1.innerHTML = nhour1
+        hour2.innerHTML = nhour2
+        min1.innerHTML = nmin1
+        min2.innerHTML = nmin2
+        second1.innerHTML = nsecond1
+        second2.innerHTML = nsecond2
+    }else{
+        alert("活动结束")
+    }
+}
+setInterval(function(){
+        time()
+}, 1000)
+time();
