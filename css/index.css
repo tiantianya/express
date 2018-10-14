@@ -2061,3 +2061,40 @@ body{min-width: 1200px; background: #fff;}
 #footer .siteinfo span:hover a{
 	color: #669900;	
 }
+/******************* 侧边固定栏 ********************/
+.side-wrap{
+	position: fixed;
+	bottom: 20px;
+}
+.side-pos{
+	right: 10px;
+	left: auto;
+	margin-left: 0;
+}
+.side-wrap .side{
+	width: 44px;
+	height: 44px;
+	position: relative;
+	margin-top: 6px;
+}
+.side-wrap 	.side-one{
+	display: block;
+	width: 44px;
+	height: 44px;
+	background: url(http://i.sfimg.cn/html/images/paid/paid_bg.png) -41px -182px no-repeat;
+}
+.side-wrap .side-num{
+	display: none;
+	position: absolute;
+    top: -5px;
+    right: -9px;
+    width: 36px;
+    text-align: center;
+    color: #FA9600;
+    border: 1px solid #dedede;
+    height: 20px;
+    line-height: 18px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+}
