@@ -957,7 +957,7 @@ body{min-width: 1200px; background: #fff;}
 	cursor: default;
 }
 .show .bg{
-	width: 1349px;
+	width: 100%;
 	height: 480px;
 	position: absolute;
 	z-index: 0;
@@ -1512,4 +1512,552 @@ body{min-width: 1200px; background: #fff;}
 }
 .foodright .rimg:hover .rbutton{
 	background: url(http://i.sfimg.cn/html/images/index_icon_new.png) no-repeat -204px -33px;
+}
+/****************************** 推荐 *****************************/
+.recommend{
+	width: 1200px;
+	padding: 15px 14px;
+	border: 1px solid #f5f5f5;
+	margin-top: 46px;
+	position: relative;
+	font-family: "微软雅黑";
+}
+.recommend .top{
+	width: 116px;
+	height: 23px;
+	position: absolute;
+	top: -14px;
+	left: 50%;
+	margin-left: -58px;
+	background: #fff;
+	text-align: center;
+}
+.recommend .top i{
+	width: 97px;
+	height: 23px;
+	display: inline-block;
+	background: url(http://i.sfimg.cn/html/images/sf_new_bg.png) left top no-repeat;
+}
+.plist li{
+	width: 234px;
+	padding: 15px 12px;
+	float: left;
+	position: relative;
+}
+.plist .pImg{
+	width: 210px;
+	height: 210px;
+}
+.plist .p-btn1{
+	top: 211px;
+	width: 211px;
+}
+.recommend .plist li:hover .p-btn1{
+	top: 186px;
+	transition: all 0.3s;
+}
+.plist .pImg img{
+	width: 210px;
+	height: 210px;
+}
+.plist .t-title{
+	height: 36px;
+	overflow: hidden;
+}
+.t-title a{
+	color: #666;
+}
+/*************************** 推荐：已经没有了 **************************/
+.recommend-end{
+	width: 220px;
+	margin: 0 auto;
+}
+.recommend-end .line{
+	height: 1px;
+	margin-top: 18px;
+	overflow: hidden;
+	background: #f5f5f5;
+}
+.recommend-end p{
+	width: 97px;
+	margin: 0 auto;
+	font-size: 14px;
+	color: #969696;
+	font-family: "微乳雅黑";
+	text-align: center;
+	margin-top: -8px;
+	background: #fff;	
+}
+/*************************** 优选味道，热门晒单，发现优品 ****************/
+.taste{
+	width: 400px;
+	height: 200px;
+	margin: 0 20px 0 0;
+	border-bottom: 1px solid #f0f0f0;
+	float: left;
+	overflow: hidden;
+}
+.caption{
+	height: 50px;
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Microsoft YaHei;
+	padding: 15px 0 10px 0;
+	border-bottom: 1px solid #e8e8e8;
+	color: #323232;
+}
+.caption p{
+	padding: 0 0 0 15px;
+	width: 400px;
+	background: url(http://i.sfimg.cn/html/images/foot/zhiwei_bg.jpg) center left no-repeat;
+}
+.taste .slide{
+	width: 170px;
+	height: 120px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	margin-top: 20px;
+}
+.slide:hover button{
+	display: inline;
+	opacity: 0.6;
+}
+#slider1{
+	width: 170px;
+	height: 110px;
+	overflow: hidden;
+}
+#slider1 ul{
+	width: 510px;
+	position: absolute;
+}
+#slider1 li{
+	float: left;
+	width: 170px;
+	height: 110px;
+}
+.taste .slide img{
+	width: 170px;
+	height: 100px;
+}
+.taste button{
+	position: absolute;
+	top: 45px;	
+	width: 40px;
+	height: 50px;;
+	display: none;
+}
+.taste .btn-left{
+	left: 0;
+}
+.taste .btn-left s{
+	width: 38px;
+	height: 50px;
+	display: block;
+	cursor: pointer;
+	background: url(http://i.sfimg.cn/html/images/indeximgnew.png) 8px 10px no-repeat;
+}
+.taste .btn-right{
+	right: 0;
+}
+.taste .btn-right s{
+	width: 38px;
+	height: 50px;
+	display: block;
+	cursor: pointer;
+	background: url(http://i.sfimg.cn/html/images/indeximgnew.png) -16px 10px no-repeat;
+}
+.taste .btn-list{
+	width: 60px;
+	position: absolute;
+	top: 10px;
+	right: 1px;
+}
+.taste .btn-list i{
+	display: block;
+	width: 15px;
+	height: 4px;
+	float: left;
+	cursor: pointer;
+	background: #dcdcdc;
+
+}
+.taste .btn-list i.active{
+	background: #7abd54;
+}
+.taste .info{
+	line-height: 20px;
+	margin: 20px 0 0 10px;
+	float: left;
+}
+.taste .info p{
+	width: 215px;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 10px;
+	overflow: hidden;
+	background: url(http://i.sfimg.cn/html/images/foot/dian.jpg) no-repeat 	scroll left center;
+}
+.taste .info p:hover a{
+	color: #669900;
+}
+.taste .info p a{
+	color: #646464;
+}
+.share{
+	width: 420px;
+	height: 200px;
+	float: left;
+	overflow: hidden;
+	border-bottom: 1px solid #f0f0f0;
+	margin: 0 20px 0 0;
+}
+.scrollbox{
+	margin: 20px 0 0 0;
+	position: relative;
+	height: 122px;
+	overflow: hidden;
+}
+.scrollbox ul{
+	position: absolute;
+	left: 0;
+}
+.share li{
+	height: 58px;
+	overflow: hidden;
+	border-bottom: 1px dotted #e8e8e8;
+	margin-bottom: 6px;
+	vertical-align: middle;
+}
+.share .share_c{
+	height: 50px;
+	overflow: hidden;
+}
+.share .share_c .le{
+	float:  left;
+}
+.share .share_c a{
+	color: #fa9600;
+}
+.share .share_c img{
+	width: 50px;
+	height: 50px;
+}
+.share .share_c .ri{
+	width: 370px;
+	float: right;
+	overflow: hidden;
+}
+.share .share_c .ri p{
+	height: 22px;
+	line-height: 22px;
+	padding-left: 22px;
+	overflow: hidden;
+}
+.share .share_c .ri .s-title{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.share .share_c .content{
+	color: #646464;
+}
+.share_c p:hover a{
+	text-decoration: underline;
+}
+.find{
+	width: 339px;
+	height: 201px;
+	border: 1px solid #e8e8e8;
+	float: right;
+}
+.ucaption{
+	font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 300px;
+    height: 50px;
+    line-height: 25px;
+    padding: 14px 0 10px 0;
+    border-bottom: 1px solid #E8E8E8;
+}
+.ucaption p {
+    background: url(http://i.sfimg.cn/html/images/foot/youpin.jpg) no-repeat center left;
+    padding: 0 0 0 24px;
+    float: left;
+    color: #323232;
+}
+.find h2{
+	cursor: pointer;
+	float: right;
+	display: block;
+}
+.ucaption a{
+	width: 60px;
+	height: 29px;
+	display: block;
+	background: url(http://i.sfimg.cn/html/images/foot_bottom.png) -3px -97px no-repeat;
+}
+.maildy{
+	width: 302px;
+	margin: 0 auto;
+	padding: 15px 0 0 0;
+}
+.maildy span{
+	float: left;
+}
+.maildy span .i{
+	width: 136px;
+	height: 24px;
+	line-height: 22px;
+	padding: 0 2px;
+	border: 1px solid #ccc;
+	margin-right: 2px;
+	display: inline;
+	color: #969696;
+}
+.maildy .ftitle{
+	width: 60px;
+}
+#store-selector1{
+	height: 24px;
+	margin-right: 3px;
+	float: left;
+	position: relative;
+}
+#store-selector1 .text{
+	height: 24px;
+	line-height: 22px;
+	overflow: hidden;
+	background: #FFFFFF;
+    border: 1px solid #CECBCE;
+	float: left;
+	padding: 0 20px 0 4px;
+	position: relative;
+	top: 0;
+	font-size: 12px;
+}
+#store-selector1 .text b{
+	background: url(http://i.sfimg.cn/html/images/indexImg20130307.png?v=1.4) no-repeat -386px -2px;
+    display: block;
+    height: 24px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 17px;
+}
+.maildy .btn{
+	width: 44px;
+	height: 24px;
+	border: 0;
+	display: block;
+	background: url(http://i.sfimg.cn/html/images/foot_bottom.png) -118px -106px no-repeat;	
+}
+.maildy .dy{
+	color: #656565;
+	font: 12px/150% Arial,Verdana,"宋体";
+}
+.maildy .dy:hover{
+	color: #669900;
+	font: 12px/150% Arial,Verdana,"宋体";
+}
+/*********************** 底部 **********************/
+#footer{
+	width: 100%;
+	line-height: 18px;
+	color: #969696;
+	overflow: hidden;
+}
+#footer .footer-top{
+	width: 100%;
+	height: 120px;
+	margin: 10px 0 0 0;
+	background: #f5f5f5;
+}
+#footer .footer-top ul{
+	width: 1200px;
+	margin: 0 auto;
+}
+#footer .footer-top li{
+	width: 300px;
+	height: 120px;
+	float: left;
+}
+#footer .world{
+	background: url(http://i.sfimg.cn/html/images/foot/f1.png) center center no-repeat;
+}
+#footer .chain{
+	background: url(http://i.sfimg.cn/html/images/foot/f2.png) center center no-repeat;
+}
+#footer .quality{
+	background: url(http://i.sfimg.cn/html/images/foot/f3.png) center center no-repeat;
+}
+#footer .serve{
+	background: url(http://i.sfimg.cn/html/images/foot/f4.png) center center no-repeat;
+}
+#footer .foot{
+	width: 100%;
+	height: 285px;
+}
+.foot-top{
+	width: 1200px;
+	margin: 0 auto;
+}
+.foot-top .left{
+	width: 290px;
+	height: 145px;
+	float: left;
+	margin: 20px 0 0 10px;
+	background: url(http://i.sfimg.cn/html/images/foot/logo.jpg) left top no-repeat;
+}
+.foot-top .left ul{
+	padding: 85px 0 0 0;
+}
+.foot-top .left .phone{
+	color: #646464;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 6px 0;
+}
+.foot-top .center{
+	float: left;
+	margin: 35px 0 0 0;
+	width: 645px;
+}
+.foot-top .center ul{
+	float: left;
+	margin: 0 8px 0 0;
+	padding: 0;
+	width: 120px;
+}
+.foot-top .center li{
+	text-align: left;
+	height: 24px;
+	line-height: 24px;
+	font-family: Microsoft YaHei;
+}
+.foot-top .center  li:hover{
+	color: #669900;
+}
+.foot-top .center .title{
+	color: #707070;
+	font-size: 14px;
+	font-weight: bold;
+}
+#footer a{
+	color: #646464;
+	text-decoration: none;
+}
+.foot-top .center ul li a{
+	display: block;
+	padding: 0;
+}
+.foot-top .right{
+	float: left;
+	margin: 35px 0 0 0;
+	width: 235px;
+	height: 145px;
+}
+.foot-top .right ul{
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.foot-top .right li{
+	color: #666;
+	font-size: 14px;
+	font-family: Microsoft YaHei;
+    font-weight: bold;
+}
+.foot-top .right .ios{
+	width: 80px;
+	text-align: center;
+	margin: 0 50px 8px 0;
+	line-height: 24px;	
+}
+.foot-top .right .ios li{
+	width: 80px;
+	text-align: center;
+	margin: 0 50px 8px 0;
+	line-height: 24px;
+}
+.foot-top .right .ios span{
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	background: url(http://i.sfimg.cn/html/images/foot_bottom.png) 0 0 no-repeat;
+}
+.foot-top .right .wx li{
+	width: 80px;
+	text-align: center;
+	line-height: 24px;
+	margin: 0 0 8px 0;
+}
+.foot-top .right .wx span{
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	background: url(http://i.sfimg.cn/html/images/foot_bottom.png) -83px 0 no-repeat;	
+}
+#footer .bottom{
+	position: relative;
+	width: 1180px;
+	height: 66px;
+	margin: 0 auto;
+	border-top: 1px solid #e0e0e0;
+	padding-top: 15px;
+}
+.bottom .log1{
+	float: left;
+}
+.bottom .log1 span{
+	display: inline-block;
+	position: relative;
+	width: 94px;
+	height: 33px;
+}
+.bottom .log1 img{
+	border: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 33px;
+}
+.bottom .log1:hover img{
+	top: -7px;
+	left: -17px;
+	width: 128px;
+	height: 47px;
+}
+.bottom .log2 img{
+	height: 33px;
+}
+.bottom .log3 img{
+	height: 33px;
+}
+.bottom .log2, .bottom .log3{
+	float: left;
+	margin-left: 5px;
+}
+.siteinfo{
+	float: left;
+	position: absolute;
+	top: 13px;
+	left: 280px;
+	padding: 0;
+}
+#footer .siteinfo span{
+	padding-left: 13px;
+}
+#footer .siteinfo span:hover{
+	color: #669900;
+}
+#footer .siteinfo span:hover a{
+	color: #669900;	
 }

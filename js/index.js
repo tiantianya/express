@@ -31,7 +31,7 @@ function Banner(){}
                this.autoPlay();
                return 0;
            }          
-		    this.bala = $("#bg");
+		    this.bala = $("#bg ul");
 		    
            this.bindEvent();
         },
