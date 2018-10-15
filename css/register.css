@@ -48,7 +48,7 @@
 .reg_main{
     padding: 45px 0 0 40px;
     border-top: 1px solid #d6d5d5;
-    width: 960px;
+    width: 1000px;
     min-height: 490px;
     background: #fff;
     margin: 0 auto;
@@ -130,4 +130,101 @@ input{
 }
 .reg_main .safe .default{
     background: #c4c4c4;
+}
+.reg_main li .regcode{
+    float: left;
+    padding: 0 5px;
+    width: 60px;
+    height: 38px;
+    border: 1px solid #cdcdcd;
+}
+.reg_main li .code-img{
+    float: left;
+    width: 106px;
+    margin-left: 6px;
+    height: 36px;
+}
+.reg_main li .code{
+    width: 86px;
+    line-height: 36px;
+    margin-left: 6px;
+    float: left;
+}
+.reg_main li .code a{
+    color: #6e9b0c;
+}
+.reg_main .agreement{
+    padding-left: 88px;
+}
+.reg_main li .agree{
+    margin-left: 29px;
+    width: 297px;
+    height: 36px;
+    line-height: 36px;
+    display: block;
+    float: left;
+}
+.reg_main li .agree-title{
+    color: #565656;
+    text-decoration: none;
+}
+.reg_main li .agree-title font{
+    color: #6e9b0c;;
+    text-decoration: none;
+}
+.reg_main .register{
+    margin-left: 29px;
+    margin-top: 10px;
+    padding-left: 88px;
+}
+.reg_main .register .instaint{
+    display: block;
+    float: left;
+    width: 271px;
+    height: 38px;
+    line-height: 38px;
+    background: url(https://passport.sfbest.com/images/reg_btn.jpg) left top no-repeat;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    margin-right: 20px;
+}
+.tip{
+    padding: 15px 10px 10px 45px;
+    border-top: 1px dotted #dcdcdc;
+    position: relative;
+    left: -30px;
+    width: 985px;
+    background: url(https://passport.sfbest.com/images/reg_tip.png) no-repeat 25px 16px;
+}
+.tip a{
+    color: #669900;
+}
+.footer{
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px;
+    font-size: 12px;
+    font-family: "宋体", Arial, Helvetica, sans-serif;
+}
+.footer span,.footer p{
+    line-height: 26px;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer span{
+    padding-left: 376px;
+    display: block;
+    color: #176246;
+}
+.footer span li{
+    float: left;
+}
+.footer span a{
+    color: #666;
+    text-decoration: none;
+}
+.footer p a{
+    text-decoration: none;
+    color: #515151;
 }
