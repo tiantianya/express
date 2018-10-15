@@ -1,6 +1,5 @@
 // *****************顶部点击事件****************
 var oTopclose = document.getElementById("topclose");
-var oTopmenu = document.getElementById("topmenu");
 var oBan = document.getElementById("banner");
 oTopclose.onclick = function(){
     oBan.style.height = "0";
@@ -23,7 +22,8 @@ function Banner(){}
 //         this.ul = $("#show ul");
 			this.ul = $(options.ul);
 			this.wrap = $(options.wrap);
-			this.btn = $(options.btn);
+            this.btn = $(options.btn);
+            this.bala = $(options.bala);
            // 获取列表中第一个元素的宽度值;
            this.item_width = this.item_list.width();
                        
@@ -31,7 +31,7 @@ function Banner(){}
                this.autoPlay();
                return 0;
            }          
-		    this.bala = $("#bg ul");
+		    // this.bala = $("#bg ul");
 		    
            this.bindEvent();
         },
@@ -76,10 +76,7 @@ function Banner(){}
              console.log($(this.target).index());
             // index();
             this.nowIndex = $(this.target).index();
-            this.animate();
-            
-            
-            
+            this.animate();   
         },
         animate:function(){
             // console.log(this.nowIndex);
@@ -112,8 +109,45 @@ banner.init({
     ul : "#slider-wrap ul",
     btn_list:"#anniu i",
     wrap:"#slider-wrap",
-    btn:"#anniu"
+    btn:"#anniu",
+    bala:"#bg ul"
 })
+// *************************优选味道轮播图*********************
+var banner1 = new Banner();
+banner1.init({
+    item_list : "#slider1 li",
+    ul : "#slider1 ul",
+    left_btn:"btn-left",
+    right_btn:"btn-right",
+    btn_list:"#btn-list i",
+    wrap:"#slider1",
+    btn:"#btn-list"
+})
+// *****************************热门晒单****************************
+
+    var oTop = $("#toplist");
+    var i = 0;
+    // var top1 = $("#toplist").position().top;
+    var top1 = parseInt($("#toplist").css("top"));
+    console.log(top1);
+    function auto(){
+        this.autoTimer = setInterval(function(){           
+            if(top1 > -390 ){
+                oTop.animate(
+                    {top:-130*i},1000
+                    )               
+                i++;
+            }       
+            if(top1 <= -390){
+                console.log(1);
+                oTop.animate(
+                    {top:0},0
+                    )
+                i=1;
+            }            
+        }.bind(this),3000)
+    }
+ auto();
 //***********************************倒计时********************************************
 var d2 = new Date("2018/10/17 17:41:00")
 // 截止的事件;
@@ -141,3 +175,20 @@ setInterval(function(){
         time()
 }, 1000)
 time();
+// ***********************右侧固定栏鼠标移入移出事件************************
+// $(function(){
+//     $(".side").click(function(){
+//         $(".cart-wrap").animate({
+//             display:"block",
+//         })
+//         $(".cart-list").animate({
+//             right:"0",
+//         }).queue(function(next){
+//             $(this).css('background','#ddd');
+//             next();
+//         })
+//     })
+// })
+
+   
+  

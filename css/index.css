@@ -1723,8 +1723,10 @@ body{min-width: 1200px; background: #fff;}
 .scrollbox ul{
 	position: absolute;
 	left: 0;
+	top: 0px;
 }
 .share li{
+	position: relative;
 	height: 58px;
 	overflow: hidden;
 	border-bottom: 1px dotted #e8e8e8;
@@ -2065,6 +2067,7 @@ body{min-width: 1200px; background: #fff;}
 .side-wrap{
 	position: fixed;
 	bottom: 20px;
+	z-index: 999;
 }
 .side-pos{
 	right: 10px;
@@ -2083,6 +2086,14 @@ body{min-width: 1200px; background: #fff;}
 	height: 44px;
 	background: url(http://i.sfimg.cn/html/images/paid/paid_bg.png) -41px -182px no-repeat;
 }
+.side-wrap .side-two{
+	width: 44px;
+	height: 44px;
+	display: block;
+	border: 1px solid #dadada;
+	opacity: 0.8;
+	background: url(http://i.sfimg.cn/html/images/productList.png) 0 -45px no-repeat;
+}
 .side-wrap .side-num{
 	display: none;
 	position: absolute;
@@ -2097,4 +2108,281 @@ body{min-width: 1200px; background: #fff;}
     border-radius: 10px;
     background-color: white;
     overflow: hidden;
+}
+.side-wrap .side-foot{
+	width: 44px;
+	height: 44px;
+	display: block;
+	border: 1px solid #dadada;
+	opacity: 0.8;
+	background: url(http://i.sfimg.cn/html/images/productList.png) -42px -82px;
+}
+.side-wrap .side-app{
+	width: 44px;
+	height: 44px;
+	display: block;
+	border: 1px solid #dadada;
+	opacity: 0.8;
+	overflow: hidden;
+	background: url(http://i.sfimg.cn/html/images/productList.png) -42px -40px;
+}
+.side-wrap .side-promote{
+	width: 44px;
+	height: 44px;
+	display: block;
+	border: 1px solid #dadada;
+	opacity: 0.8;
+	background: url(http://i.sfimg.cn/html/images/sf_new_bg.png) 0 -27px no-repeat;
+}
+.side-wrap .side-top{
+	width: 44px;
+	height: 44px;
+	display: block;
+	border: 1px solid #dadada;
+	opacity: 0.8;
+	background: url(http://i.sfimg.cn/html/images/productList.png) 0 -82px;
+}
+.cart-wrap{
+	display: none;
+	transition: all 0.5s;
+}
+.cart-wrap .cart-shopping{
+	position: absolute;
+	right: 44px;
+	bottom: 152px;
+	width: 372px;
+	overflow: hidden;
+}
+.cart-list{
+	position: relative;
+	bottom: 0;
+	width: 362px;
+	border: 1px solid #dadada;
+	background: #fff;
+	transition: all 0.3s;
+}
+.cart-list .cart-num{
+	height: 48px;
+	text-align: center;
+	color: #000;
+	display: none;
+}
+.cart-list .cart-num-icon{
+	height: 18px;
+	padding: 0 0 0 25px;
+	display: inline-block;
+	margin-top: 20px;
+	background: url(http://i.sfimg.cn/html/images/productList.png) -88px -39px no-repeat;
+}
+.cart-list #add-num{
+	color: #ea5404;
+}
+.cart-list .floatcar{
+	border: 0 none;
+	box-shadow: none;
+	background: #fff;
+}
+.floatcar{
+	width: 360px;
+	padding: 10px;
+	box-shadow: none;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 20px;
+}
+.cart-list .floatcar .btnhover{
+	top: -29px;
+}
+.floatcar1{
+	padding: 10px 0;
+}
+.floatcar .nopro{
+	width: 240px;
+	height: 42px;
+	margin: 0 0 0 85px;
+	background: url(http://i.sfimg.cn/html/images/header.png) -99px -123px no-repeat;
+}
+.floatcar .nopro p{
+	padding-left: 50px;
+}
+.cart-wrap .cart-arr{
+	width: 8px;
+	height: 15px;
+	margin-left: -1px;
+	position: absolute;
+	right: -8px;
+	background: url(http://i.sfimg.cn/html/images/productList.png) -88px -88px;
+}
+.appinfo{
+	display: none;
+}
+.appdown{
+	position: absolute;
+	right: 44px;
+	bottom: 50px;
+	width: 372px;
+	overflow: hidden;
+}
+.appitem{
+	padding: 20px 0 0 0;
+	position: relative;
+	bottom: 0;
+	width: 360px;
+	border: 1px solid #dadada;
+	background: #fff;
+}
+.appitem .sf-client{
+	margin: 0 0 10px 50px;
+	position: relative;
+	text-align: left;
+}
+.appitem .client-img{
+	width: 115px;
+	height: 116px;
+	display: block;
+	overflow: hidden;
+	background: url(http://i.sfimg.cn/html/images/indexImg20130307.png?v=1.4) 0 -210px;
+}
+.appitem i{
+	width: 50px;
+	height: 29px;
+	position: absolute;
+	top: 20px;
+	left: 135px;
+	display: block;
+	background: url(http://i.sfimg.cn/html/images/header.png) -73px -93px no-repeat;
+}
+.appitem .client-txt{
+	position: absolute;
+	left: 145px;
+	top: 54px;
+}
+.appitem .client-txt em{
+	display: block;
+	line-height: 20px;
+}
+.appitem .client-txt strong{
+	line-height: 20px;
+	color: #76ac25;
+}
+.appitem .client-promo{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fa6400;
+	font-size: 14px;
+	font-weight: bold;
+	background: url(http://i.sfimg.cn/html/images/indexImg20130307.png?v=1.4) -116px -210px no-repeat #fcfbe4;
+}
+.appitem .client-promo a{
+	color: #fa6400;
+}
+.appdown .cart-arr{
+	width: 8px;
+	height: 15px;
+	position: absolute;
+	right: -8px;
+	bottom: 63px;
+	margin-left: -1px;
+	background: url(http://i.sfimg.cn/html/images/productList.png) -88px -88px no-repeat;
+}
+.foott{
+	display: none;
+}
+.history{
+	width: 372px;
+	overflow: hidden;
+	position: absolute;
+	right: 44px;
+	bottom: 50px;
+}
+.his-list{
+	width: 360px;
+	position: relative;
+	bottom: 0;
+	border: 1px solid #dadada;
+	background: #fff;
+}
+.foott .cart-num{
+	text-align: center;
+	color: #000;
+	padding: 10px;
+	border-bottom: 1px solid #1b6146;
+}
+.his-list .floatcar{
+	position: static;
+	border: 0 none;
+	box-shadow: none;
+	background: #fff;
+}
+.foott .floatcar ul{
+	max-height: 260px;
+}
+.floatcar ul{
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: relative;
+	overflow: auto;
+}
+.floatcar ul li{
+	margin: 0;
+	height: 42px;
+	line-height: 18px;
+	padding: 12px 0 12px 0;
+	position: relative;
+	border-bottom: 1px dashed #ccc;
+	color: #565656;
+}
+.floatcar ul li .l{
+	position: absolute;
+	width: 45px;
+	height: 45px;
+}
+.floatcar ul .l img{
+	width: 42px;
+	height: 42px;
+	vertical-align: middle;
+	border: 1px solid #ccc;
+}
+.floatcar ul li .c{
+	position: absolute;
+	width: 200px;
+	height: 36px;
+	top: 14px;
+	left: 48px;
+	overflow: hidden;
+}
+.floatcar ul li .c a{
+	display: block;
+	height: 18px;
+	overflow: hidden;
+	color: #565656;
+	text-decoration: none;
+}
+.floatcar ul li .r{
+	position: absolute;
+	width: 80px;
+	height: 36px;
+	right: 0;
+	text-align: right;
+}
+.floatcar ul li .r font{
+	color: #f05404;
+    font-size: 14px;
+    font-weight: bold;
+}
+.floatcar ul li .r a{
+	color: #547e01;
+	clear: both;
+	text-decoration: none;
+}
+.foott .cart-arr{
+	width: 8px;
+	height: 15px;
+	margin-left: -1px;
+	position: absolute;
+	right: -8px;
+	bottom: 110px;
+	background: url(http://i.sfimg.cn/html/images/productList.png) -88px -88px no-repeat;
 }

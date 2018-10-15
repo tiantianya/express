@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/register.css">
+    <title>欢迎注册</title>
+</head>
+<body>
+    <div class="header clearfix">
+        <a href="#">
+            <img src="https://passport.sfbest.com/images/logo.png" alt="">
+            <span>欢迎注册</span>
+        </a>
+    </div>
+    <div class="tabbox clearfix">
+        <span>个人用户</span>
+        <div class="login">已有账号，立即
+            <a href="#">登录</a>
+        </div>
+    </div>
+    <div class="reg_main" id="reg_main">
+        <ul>
+            <form action="" id="form">
+                <li class="name">
+                    <label for="">
+                        <font>*</font> 账户名：
+                    </label>
+                    <span class="name-input">
+                        <input type="hidden" id="nameok">
+                        <input type="text" class="input" name="" id="username">
+                    </span>
+                    <span id="username-err">请输入您的手机号</span>
+                </li>
+                <li>
+                    <label for="">
+                        <font>*</font> 登录密码：
+                    </label>
+                    <span class="name-input">
+                        <input type="password" class="input" name="" id="password">
+                        <em></em>
+                    </span>
+                    <span class="password-err"></span>
+                </li>
+                <li class="safe">
+                    <font>安全程度：</font>
+                    <em class="default">弱</em>
+                    <em class="default">中</em>
+                    <em class="default">强</em>
+                </li>
+                <li class="name">
+                    <label for="">
+                        <font>*</font> 确认密码：
+                    </label>
+                    <span class="name-input">
+                        <input type="password" class="input" name="" id="password2">
+                        <em></em>
+                    </span>
+                    <span class="password2-err"></span>
+                </li>
+                <li class="name" id="validate">
+                    <label for="">
+                        <font>*</font> 验证码：
+                    </label>
+                    <input type="text" class="regcode" id="regcode">
+                    <em></em>
+                    <img src="" alt="" class="code-img">
+                    <span class="code">看不清？
+                        <a href="#">换一张</a>
+                    </span>                   
+                </li>
+                <li class="agreement">
+                    <span class="agree">
+                        <input type="checkbox" id="agreeid">
+                        <a href="#" class="agree-title">我已阅读并同意
+                            <font>《顺丰优选用户注册协议》</font>
+                        </a>
+                    </span>
+                    <span id="agreeiderr"></span>
+                </li>
+                <li class="register" id="register">
+                    <input type="hidden" name="" id="enroll">
+                    <a href="#" class="instaint" id="instaint">立即注册</a>
+                </li>
+            </form>
+        </ul>
+        <div class="tip">
+            <a href="#">了解更多>></a>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">招聘人才</a></li>
+            <li><a href="#">友情链接</a></li>
+        </ul>
+        <p>北京顺丰电子商务有限公司</p>
+        <p>北京市公安局顺义分局备案11011302000890号|
+            <a href="#">京ICP备12011349号</a>
+            <a href="#">企业营业执照</a>
+        </p>
+        <p>Copyright© 顺丰优选 sfbest.com 版权所有</p>
+    </div>
+</body>
+</html>
