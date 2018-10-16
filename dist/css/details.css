@@ -931,12 +931,41 @@ a {
                 left: 14px;
                 overflow: hidden;
                 background: url(http://i.sfimg.cn/html/images/productinfo.png) no-repeat -49px -10px; }
+          .wrap .product .items .product-left .view .bigger {
+            display: none;
+            position: absolute;
+            left: 400px;
+            width: 500px;
+            height: 330px;
+            overflow: hidden; }
+            .wrap .product .items .product-left .view .bigger img {
+              width: 1250px;
+              height: 825px;
+              position: absolute;
+              left: 0;
+              top: 0; }
           .wrap .product .items .product-left .view .bigpic {
             height: 330px;
             width: 330px;
             padding: 0;
             position: relative;
             float: right; }
+            .wrap .product .items .product-left .view .bigpic #film {
+              width: 330px;
+              height: 330px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: 999; }
+            .wrap .product .items .product-left .view .bigpic #frame {
+              width: 200px;
+              height: 120px;
+              box-shadow: 0 0 5px #000;
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: 1;
+              display: none; }
             .wrap .product .items .product-left .view .bigpic img {
               width: 330px;
               height: 330px; }
