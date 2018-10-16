@@ -65,7 +65,7 @@ gulp.task("css", ()=>{
 gulp.task("sass", () =>{
     return gulp.src(["sass/*.scss"])
            .pipe(sass().on("error",sass.logError))
-           .pipe(gulp.dest("dist/css"))
+           .pipe(gulp.dest("dist/details.css"))
 })
 
 // 编译 ? es6 => es5;

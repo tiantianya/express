@@ -605,6 +605,9 @@ body{min-width: 1200px; background: #fff;}
 	margin: 2px 0 0 0;
 	background: url(http://i.sfimg.cn/html/images/header.png) -102px -235px no-repeat;
 }
+.shopingcar .t{
+	color: #666;
+}
 .shopingcar .cartnum {
     position: absolute;
     top: -1px;
