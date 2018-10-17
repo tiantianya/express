@@ -106,12 +106,64 @@ input{
     outline: none;
     color: #515151;
     padding: 0 5px;
+    float: left;
 }
-.reg_main li #username-err{
+.reg_main li #regok{
     display: none;
-    width: 230px;
+    background: url(https://passport.sfbest.com/images/icon4.jpg) center no-repeat;
+    width: 23px;
+    height: 36px;
+    float: left;
+}
+.reg_main li #regok2{
+    display: none;
+    background: url(https://passport.sfbest.com/images/icon4.jpg) center no-repeat;
+    width: 23px;
+    height: 36px;
+    float: left;
+}
+.reg_main li #regok3{
+    display: none;
+    background: url(https://passport.sfbest.com/images/icon4.jpg) center no-repeat;
+    width: 23px;
+    height: 36px;
+    float: left;
+}
+.reg_main li #span1{
+    color: #666;
+    display: none;
+    width: 255px;
     padding: 0 10px 0 15px;
     color: #666;
+    float: left;
+    line-height: 36px;
+}
+.reg_main li #span2{
+    color: #666;
+    display: none;
+    width: 255px;
+    padding: 0 10px 0 15px;
+    line-height: 36px;
+    float: left;
+    line-height: 18px;
+}
+.reg_main li #span3{
+    color: #666;
+    display: none;
+    width: 255px;
+    padding: 0 10px 0 15px;
+    line-height: 36px;
+    float: left;
+    line-height: 36px;
+}
+.reg_main li #span4{
+    color: #666;
+    display: none;
+    width: 255px;
+    padding: 0 10px 0 15px;
+    line-height: 36px;
+    float: left;
+    line-height: 36px;
 }
 .reg_main .safe{
     color: #666;
@@ -131,7 +183,7 @@ input{
     margin-right: 2px;
     color: #fff;
 }
-.reg_main .safe .default{
+.reg_main .safe .weak,.reg_main .safe .kind,.reg_main .safe .better{
     background: #c4c4c4;
 }
 .reg_main li .regcode{
