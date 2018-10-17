@@ -19,7 +19,7 @@ oBtn.onclick = function(){
       .then(function(res){
       console.log(res);
       if(res == "登录成功"){
-          window.location.href = "http://localhost:8888/index.html"
+          window.location.href = "http://localhost:8888";
       }
   })
 
