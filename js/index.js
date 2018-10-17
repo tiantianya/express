@@ -173,18 +173,42 @@ setInterval(function(){
 time();
 // ***********************右侧固定栏鼠标移入移出事件************************
 // $(function(){
-//     $("#side_cart").onmouseover(function(){
-//         $(".cart-wrap").animate({
-//             display:"block",
-//         })
-//         $(".cart-list").animate({
-//             right:"0",
+//     $("#side_cart").click(function(){
+//         console.log(1);
+//         $(".cart-wrap").attr("display","block");
+//         $(".cart-shopping").attr("overflow","visible")
+//         $(".cart-list").attr("right","0");
 //         }).queue(function(next){
 //             $(this).css('background','#ddd');
 //             next();
 //         })
-//     })
 // })
+// $("#side_cart").mouseover(function(){
+//     $(".cart-wrap").css("display","block");
+//     $(".cart-shopping").css("overflow","visible");
+//     $(".cart-list").css("right","380px");
+//   });
+
+$("#side_cart").mouseenter(function(){
+    $(".cart-wrap").css("display","block");
+}).mouseleave(function(){
+    $(".cart-wrap").css("display","none");
+});
+$("#side_app").mouseenter(function(){
+    $(".appinfo").css("display","block");
+}).mouseleave(function(){
+    $(".appinfo").css("display","none");
+});
+// ******************************回到顶部******************************
+var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+ var aJdfoot = document.getElementById("gotop")
+    aJdfoot.onclick = function(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+
+  
 
    
   
