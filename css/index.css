@@ -2151,7 +2151,7 @@ body{min-width: 1200px; background: #fff;}
 }
 .cart-wrap .cart-shopping{
 	position: absolute;
-	right: 44px;
+	right: -330px;
 	bottom: 152px;
 	width: 372px;
 	overflow: hidden;

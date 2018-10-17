@@ -35,7 +35,7 @@ window.onload=function(){
             var f= this.pass = true;
             // oRegok.style.display = "block";
             oOk1.style.display = "block";
-			//console.log(f);
+			oSpa1.style.borderColor = "#666";
 		}else{
 			var a = this.pass = false;
             oSpan1.style.color = "#ff4800";
@@ -55,20 +55,23 @@ window.onload=function(){
 				if(/[0-9]/.test(oRes)){  //
                     oSpan2.innerHTML = "密码太简单，建议使用数字、字母、下划线组合";
                     oOk2.style.display = "block";	
-                    oWeak.style.background = "#f79100";
+					oWeak.style.background = "#f79100";
+					oSpa2.style.borderColor = "#666";
 				}
 				if(/[a-zA-Z]/.test(oRes)){  //
                     oSpan2.innerHTML = "密码中,有被盗风险，建议使用数字、字母、下划线及两种以上组合";
                     oOk2.style.display = "block";	
                     oWeak.style.background = "#f79100";
-                    oKind.style.background = "#f79100";
+					oKind.style.background = "#f79100";
+					oSpa2.style.borderColor = "#666";
 				}	
 				if(/[!@#$%^*.-]/.test(oRes)){  //
                     oSpan2.innerHTML = "密码强,可放心注册";
                     oOk2.style.display = "block";
                     oWeak.style.background = "#f79100";
                     oKind.style.background = "#f79100";
-                    oBetter.style.background = "#f79100";
+					oBetter.style.background = "#f79100";
+					oSpa2.style.borderColor = "#666";
 				}		
 				this.pass = true;  
 			}else{
@@ -108,12 +111,15 @@ window.onload=function(){
 		var oReg = /^[a-zA-Z0-9]{4}$/;
 		if(oReg.test(oRes)){
             var f= this.pass = true;
-            oSpan4.innerHTML = "验证码正确";
+			oSpan4.innerHTML = "验证码正确";
+			oSpan4.style.color = "#666";
+            oInp4.style.borderColor = "#666";
 			//console.log(f);
 		}else{
 			var a = this.pass = false;
 			//console.log(a)
-            oSpan4.innerHTML = "验证码不正确";
+			oSpan4.innerHTML = "验证码不正确,四位验证码";
+			oSpan4.style.color = "#ff4800";
             oInp4.style.borderColor = "#ff4800";
 
 		}
@@ -138,14 +144,32 @@ window.onload=function(){
 				window.returnValue = false  
 			}
 		}
-		var url = "http://localhost/1815phpnow/JD/php/register.php";
-                ajaxPost(url,`username=${oInp1.value}&password=${oInp2.value}&email=${oInp2.value}&qq=${oInp2.value}&phone=${oInp2.value}`)
-                .then(function(res){
-                    if(res == "注册成功"){
- 	                 	window.location.href = 'http://localhost:8888/index.html';
+		// var url = "http://localhost:8888/proxy/localhost/shunfeng/register.php";
+		// ajaxGet(url,`username=${oInp1.value}&password=${oInp2.value}&email=${oInp2.value}&qq=${oInp2.value}&phone=${oInp2.value}`)
+        //         .then(function(res){
+		// 			console.log(res);
+        //             // if(res == "注册成功"){
+ 	    //             //  	window.location.href = 'http://localhost:8888/index.html';
                     	
                     	
-                    }
-                })
+        //             // }
+		//         })
+		console.log(oInp1.value);
+		console.log(oInp2.value);
+		$.ajax({
+			
+			type: 'GET',
+			url: "http://localhost:8888/proxy/localhost/shunfeng/register.php",
+			data: `username=${oInp1.value}&password=${oInp2.value}`,	
+					  
+		  })
+		  .then(function(res){
+		  console.log(res);
+		  
+		  if(res == "注册成功"){
+			  window.location.href = "http://localhost:8888/index.html"
+		  }
+	  })
+
 	}	
     }

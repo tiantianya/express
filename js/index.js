@@ -117,8 +117,8 @@ var banner1 = new Banner();
 banner1.init({
     item_list : "#slider1 li",
     ul : "#slider1 ul",
-    left_btn:"btn-left",
-    right_btn:"btn-right",
+    left_btn:"#btn-left",
+    right_btn:"#btn-right",
     btn_list:"#btn-list i",
     wrap:"#slider1",
     btn:"#btn-list"
@@ -126,30 +126,26 @@ banner1.init({
 // *****************************热门晒单****************************
 
     var oTop = $("#toplist");
-    var i = 0;
+    var i = 1;
     // var top1 = $("#toplist").position().top;
     var top1 = parseInt($("#toplist").css("top"));
     console.log(top1);
     function auto(){
         this.autoTimer = setInterval(function(){           
-            if(top1 > -390 ){
-                oTop.animate(
-                    {top:-130*i},1000
-                    )               
+            if(i != 4){
+                oTop.animate({top:-130*i},1000)               
                 i++;
             }       
-            if(top1 <= -390){
+            if(i == 4){
                 console.log(1);
-                oTop.animate(
-                    {top:0},0
-                    )
+                oTop.animate({top:0},0)
                 i=1;
             }            
         }.bind(this),3000)
     }
-//  auto();
+ auto();
 //***********************************倒计时********************************************
-var d2 = new Date("2018/10/17 17:41:00")
+var d2 = new Date("2018/10/31 17:41:00")
 // 截止的事件;
 function time(){
     var d =new Date() 
@@ -177,7 +173,7 @@ setInterval(function(){
 time();
 // ***********************右侧固定栏鼠标移入移出事件************************
 // $(function(){
-//     $(".side").click(function(){
+//     $("#side_cart").onmouseover(function(){
 //         $(".cart-wrap").animate({
 //             display:"block",
 //         })
