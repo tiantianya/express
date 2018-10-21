@@ -1,18 +1,16 @@
-onscroll = function(){
-    var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-    if(scrollTop >= 5000){
-		 car.handleEvent();
-    }
-}
 function ShopCar(){
 }
 $.extend(ShopCar.prototype,{
     init:function(){
+        this.page = 0;
+        this.loaded = false;
         this.main = $("#wrap ul")
         this.loadJson()
         .then(function(res){
             // console.log(res);
             this.json = res.subjects;
+
+            this.page ++;
             this.renderPage()
         })
         this.bindEvent();
@@ -20,18 +18,18 @@ $.extend(ShopCar.prototype,{
     },
     loadJson:function(){
         var opt = {
-            url:"http://localhost:8888/data.json?start="+this.page * 2 + "&count=8",
+            url:"http://localhost:8888/data.json?",
             // +this.page * 1 + "&count=4",
-            // data:{start:0,count:8},
+            data:{start:10,count:10},
             type:"GET",
             context : this
         }
         return $.ajax(opt);
     },
     renderPage:function(){
-       console.log(this.json)
+    //    console.log(this.json)
         var html = "";
-        for(var i = 0 ; i < this.json.length ; i ++){
+        for(var i = 0 ; i < this.page*10 ; i ++){
             html += `<li class="item">
                         <div class="pic">
                             <a href="#">
@@ -52,9 +50,12 @@ $.extend(ShopCar.prototype,{
                     // </li>`
         }
         this.main.html(html);
+        this.loaded = true;
         // this.main.html(html);
+        
     },
     bindEvent:function(){
+        onscroll = this.iflLoad.bind(this);
         $("#wrap ul").on("click","button",this.addCar.bind(this));
 
         $(".shopingcar").on("mouseenter",this.showList.bind(this));
@@ -70,27 +71,6 @@ $.extend(ShopCar.prototype,{
             $(".shopingcar").triggerHandler("mouseleave");
             this.listSum();
         }.bind(this));
-        this.iflLoad();
-    },
-    iflLoad : function(){
-        if(this.loaded == false){
-            return 0;
-        }
-        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-        // 显示的高度有多高;
-        var showHeight = document.documentElement.clientHeight + scrollTop;
-        // 最后一个元素;
-        var aLi = document.querySelectorAll("#wrap li");
-        var lastLi = aLi[aLi.length - 1];
-        if(lastLi.offsetTop <= showHeight + 300){
-            // 加载数据
-            this.loadMsg()
-            .then((res)=>{
-                res = typeof res == "string" ? JSON.parse(res) : res;
-                this.renderPag(res);
-            })
-            this.loaded = false;
-        }
     },
     addCar:function(event){
         // 我怎么知道把谁加入到购物车之中那?;
@@ -150,21 +130,43 @@ $.extend(ShopCar.prototype,{
         this.listSum();
     }
     ,
+    iflLoad : function(){
+        if(this.loaded == false){
+            return 0;
+        }
+        if(this.page>=10){
+            return 0;
+        }
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        // 显示的高度有多高;
+        var showHeight = document.documentElement.clientHeight + scrollTop;
+        // 最后一个元素;
+        var aLi = document.querySelectorAll(".item");
+        var lastLi = aLi[aLi.length - 1];
+        console.log(aLi);
+        if(lastLi.offsetTop <= showHeight){
+            // 加载数据
+            this.loadJson()
+            .then((res)=>{
+                res = typeof res == "string" ? JSON.parse(res) : res;
+                this.page++;
+                this.renderPage(res);
+            })
+            this.loaded = false;
+        }
+    },
     showList:function(event){
         // 判定是否存在购物车,如果不存在购物车就没必要拼接列表了;
         var target = event.target;
-
         // if(target != $(".shopCar>div")[0]) return 0;
         // if(target != $(".shopingcar>b")) return 0;
-
         var cookie;
         if(!(cookie = $.cookie("shopingcar"))){ return 0; };
         var cookieArray = JSON.parse(cookie);
-
         var html = "";
         // for 购物车里有多少商品就拼接多少个;
         for(var i = 0 ; i < cookieArray.length ; i ++){
-            console.log(cookieArray[i]);
+            // console.log(cookieArray[i]);
             // for 判断哪一个商品是购物车里的商品;
             for(var j = 0 ; j < this.json.length ; j ++){
                 if(cookieArray[i].id == this.json[j].id){
@@ -176,8 +178,7 @@ $.extend(ShopCar.prototype,{
                     break;
                 }
             }
-        }
-        
+        }   
         $(".goods-list").html(html);
     },
     listSum:function(){
@@ -193,7 +194,6 @@ $.extend(ShopCar.prototype,{
         }
         $(".shopingcar").find("b").html(sum);
     }
-
 })
 var car = new ShopCar();
 car.init();
