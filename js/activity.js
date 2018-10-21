@@ -32,8 +32,8 @@ $.extend(ShopCar.prototype,{
         for(var i = 0 ; i < this.page*10 ; i ++){
             html += `<li class="item">
                         <div class="pic">
-                            <a href="#">
-                                <img src="${this.json[i].images.small}" alt="">
+                            <a href="javascript:;">
+                                <img src="${this.json[i].images.small}" data-img-id = "${i}" alt="">
                             </a>    
                         </div>
                         <p><a>${this.json[i].title}</a></p>
@@ -52,7 +52,20 @@ $.extend(ShopCar.prototype,{
         this.main.html(html);
         this.loaded = true;
         // this.main.html(html);
+        this.Ul = document.querySelector("#wrap ul")             
+        this.Ul.onclick = function(evt){
+        // console.log(2);
+        var e = evt || window.event;
+        var img = document.querySelectorAll(".pic img");
+        var imgArray = Array.from(img);
+        var target = e.target || e.srcElement;
+        if(imgArray.indexOf(target) != -1){
+                $.cookie("goodsimgid",target.getAttribute("data-img-id"));
+                location.href = "http://localhost:8888/details.html";
+            }
         
+        }
+    
     },
     bindEvent:function(){
         onscroll = this.iflLoad.bind(this);

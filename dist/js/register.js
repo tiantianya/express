@@ -154,8 +154,8 @@ window.onload=function(){
                     	
         //             // }
 		//         })
-		console.log(oInp1.value);
-		console.log(oInp2.value);
+		// console.log(oInp1.value);
+		// console.log(oInp2.value);
 		$.ajax({
 			
 			type: 'GET',

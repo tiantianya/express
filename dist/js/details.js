@@ -52,3 +52,35 @@ var oSmall = document.getElementById("small");
 		oBigImg.style.left = -nLeft * propX + "px";
 		oBigImg.style.top = -nTop * propY + "px";
 	}	
+	// ************************接收数据跳转*************************
+	function ShopCar(){
+	}
+	$.extend(ShopCar.prototype,{
+		init:function(){	
+			this.loadJson()
+			.then(function(res){
+				this.json = res.subjects;
+				console.log(this.json);
+				if(res2 = $.cookie("goodsimgid")){	
+					$("#small img").attr("src",`${this.json[res2].images.small}`)
+					$("#big img").attr("src",`${this.json[res2].images.small}`)
+					$(".pic-items li img").attr("src",`${this.json[res2].images.small}`)
+					// $("#frame").css({"background-image":`url(${this.json[res2].images.small})`})
+				}
+			})	
+		},
+		loadJson:function(){
+			var opt = {
+				url:"http://localhost:8888/proxy/localhost:8888/data.json",
+				data:{start:10,count:10},
+				type:"GET",
+				context : this
+			}
+			return $.ajax(opt);
+		}
+
+	})
+
+	var car = new ShopCar();
+	car.init();
+
