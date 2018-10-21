@@ -53,19 +53,18 @@ var oSmall = document.getElementById("small");
 		oBigImg.style.top = -nTop * propY + "px";
 	}	
 	// ************************接收数据跳转*************************
-	function ShopCar(){
+	function Data(){
 	}
-	$.extend(ShopCar.prototype,{
+	$.extend(Data.prototype,{
 		init:function(){	
 			this.loadJson()
 			.then(function(res){
 				this.json = res.subjects;
-				console.log(this.json);
+				// console.log(this.json);
 				if(res2 = $.cookie("goodsimgid")){	
 					$("#small img").attr("src",`${this.json[res2].images.small}`)
 					$("#big img").attr("src",`${this.json[res2].images.small}`)
 					$(".pic-items li img").attr("src",`${this.json[res2].images.small}`)
-					// $("#frame").css({"background-image":`url(${this.json[res2].images.small})`})
 				}
 			})	
 		},
@@ -78,9 +77,8 @@ var oSmall = document.getElementById("small");
 			}
 			return $.ajax(opt);
 		}
-
 	})
 
-	var car = new ShopCar();
-	car.init();
+	var datas = new Data();
+	datas.init();
 

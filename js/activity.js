@@ -62,10 +62,8 @@ $.extend(ShopCar.prototype,{
         if(imgArray.indexOf(target) != -1){
                 $.cookie("goodsimgid",target.getAttribute("data-img-id"));
                 location.href = "http://localhost:8888/details.html";
-            }
-        
+            }  
         }
-    
     },
     bindEvent:function(){
         onscroll = this.iflLoad.bind(this);
@@ -89,24 +87,6 @@ $.extend(ShopCar.prototype,{
         // 我怎么知道把谁加入到购物车之中那?;
         var target = event.target ;
         var goodsId = $(target).attr("data-id");
-        // console.log(goodsId);
-        // 如何把id加入cookie;
-        // $.cookie("shopCar",goodsId);
-
-        // cookie 是纯文本;          JSON.parse()  string => array;
-        // 加入购物车需要 array 数组; JSON.stringify()  array  => string;
-        
-        // $.cookie("shopCar",`[${goodsId}]`);
-        // console.log($.cookie("shopCar"));
-
-        // 分成两种情况;
-        // 1. cookie之中没有 shopCar cookie 或者 shopCarcookie里面的值为空数组;
-
-        // 建立数组结构;
-
-        // 2. cookie 之中有了shopCar cookie shopCarCookie里面的数组不为空;
-
-        // 把cookie转换成数组 进行push操作 ;  转换成字符串 放入cookie之中;
         var cookie;
         if((cookie = $.cookie("shopingcar"))){
             // 将字符串转换为数组, 方便插入操作;
