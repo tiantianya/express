@@ -51,10 +51,8 @@ $.extend(ShopCar.prototype,{
         }
         this.main.html(html);
         this.loaded = true;
-        // this.main.html(html);
         this.Ul = document.querySelector("#wrap ul")             
         this.Ul.onclick = function(evt){
-        // console.log(2);
         var e = evt || window.event;
         var img = document.querySelectorAll(".pic img");
         var imgArray = Array.from(img);
@@ -68,7 +66,6 @@ $.extend(ShopCar.prototype,{
     bindEvent:function(){
         onscroll = this.iflLoad.bind(this);
         $("#wrap ul").on("click","button",this.addCar.bind(this));
-
         $(".shopingcar").on("mouseenter",this.showList.bind(this));
         $(".shopingcar").on("mouseleave",function(){
             $(".goods-list").children().remove();
@@ -76,7 +73,6 @@ $.extend(ShopCar.prototype,{
         $(".shopingcar").on("click",function(event){
             var target = event.target ; 
             if(target != $(".shopingcar")[0]) return 0;
-
             $.removeCookie("shopingcar");
             // 执行鼠标移出事件;
             $(".shopingcar").triggerHandler("mouseleave");
@@ -111,7 +107,6 @@ $.extend(ShopCar.prototype,{
                 }
                 cookieArray.push(goods);
             }
-
             // 将数组 转为字符串 方便 储存cookie;
 
             // console.log(JSON.stringify(cookieArray));
@@ -151,8 +146,7 @@ $.extend(ShopCar.prototype,{
     showList:function(event){
         // 判定是否存在购物车,如果不存在购物车就没必要拼接列表了;
         var target = event.target;
-        // if(target != $(".shopCar>div")[0]) return 0;
-        // if(target != $(".shopingcar>b")) return 0;
+       
         var cookie;
         if(!(cookie = $.cookie("shopingcar"))){ return 0; };
         var cookieArray = JSON.parse(cookie);

@@ -25,7 +25,6 @@ var oSmall = document.getElementById("small");
 		var nLeft = offsetX  - 50;
 		var nTop = offsetY - 50;
 		// 边界检测;  最小值 ; 最大值;
-		
 		// 最小值;
 		nLeft = nLeft < 0 ? 0 : nLeft;
 		nTop = nTop < 0 ? 0 : nTop;
