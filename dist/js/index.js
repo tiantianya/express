@@ -144,6 +144,37 @@ banner1.init({
         }.bind(this),3000)
     }
  auto();
+//  ******************************选项卡*********************
+function Tab(btn_selector,item_selector){
+    this.abtn = document.querySelectorAll(btn_selector);
+    this.aItem = document.querySelectorAll(item_selector);
+}
+Tab.prototype.init = function(){
+    this.handleEvent();
+}
+Tab.prototype.handleEvent = function(){
+    // 绑定多少事件?;
+    for(var i = 0 ; i < this.abtn.length ; i ++){
+        // 添加元素标记;
+        this.abtn[i].index = i;
+        this.abtn[i].onmouseover = this.changIndex.bind(this);
+    }
+}
+Tab.prototype.changIndex = function(event){
+    var e = event || window.event;
+    var target = e.target || e.srcElement;
+    this.index = target.index;
+    // 我的任务完成了 ,  其余的问题交由其他功能呢处;
+    this.show();
+}
+Tab.prototype.show = function(){
+    for(var i = 0 ; i < this.aItem.length ; i ++){
+        this.aItem[i].style.display = "none";
+    }
+    this.aItem[this.index].style.display = "block"
+}
+var tab = new Tab("#xuan strong","#box ul");
+tab.init();
 //***********************************倒计时********************************************
 var d2 = new Date("2018/10/31 17:41:00")
 // 截止的事件;
