@@ -465,7 +465,7 @@ body{
     left: 8px;
     z-index: 2;
 }*/
-/*****************************hrader********************/
+/*****************************header********************/
 .header{
 	width: 1200px;
 	height: 104px;
@@ -592,13 +592,47 @@ body{
     font-weight: 600;
 }
 #cart_list{
-    display: none;
-    width: 360px;
+	position: absolute;
+	left: -116px;
+	display: block;
+    width: 310px;
     right: -1px;
     box-shadow: 0 0 5px #dadada;
-    top: 34px;
+	/* top: 54px; */
+	/* padding-top: 3px; */
+	z-index: 666;
+	background: #fff;
 }
-.floatcar {
+.goods-list{
+	width: 300px;
+	/* padding: 10px; */
+	line-height: 60px;
+	position: relative;
+    max-height: 195px;
+}
+.goods-list li{
+	width: 300px;
+    height: 60px;
+}
+.goods-list li img{
+	display: inline-block;
+	height: 50px;
+	float: left;
+	width: 40px;
+}
+.goods-list li h3{
+	float: right;
+	line-height: 60px;
+	padding-left: 10px;
+}
+.goods-list li strong{
+	display: block;
+	float: right;
+	line-height: 60px;
+	padding:0 5px;
+	color: yellowgreen;
+}
+/* .floatcar {
     padding: 10px;
     width: 340px;
     font-size: 12px;
@@ -622,7 +656,7 @@ body{
 	position: absolute;
 	background-color: #fff;
 	border: 1px solid #efefef;
-}
+} */
 /**************************mainNav*****************/
 .mainNav{
 	width: 100%;
@@ -1094,7 +1128,7 @@ a{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
-#wrap ul li .p-btn .buy{
+#wrap ul li .buy{
 	width: 200px;
     height: 35px;
     background: url(http://p.sfimg.cn/article/1414656300.gif) no-repeat center center;

@@ -270,17 +270,24 @@
             <div class="shopingcar">
                 <s class="setcar"></s>
                 <a href="#" class="t">我的购物车</a>
-                <b id="cartnum" class="cartnum">0</b>
+                <b id="cartnum" class="cartnum"></b>
                 <span class="outline1"></span>
                 <span class="blank1"></span>
                 <div id="cart_list">
-                    <div id="cart_form" class="floatcar">
+                    <ul class="goods-list">
+                        <!-- <li>
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480747492.webp" alt="">
+                            <h3>我是标题</h3>
+                            <strong>100</strong>
+                        </li> -->
+                    </ul>
+                    <!-- <div id="cart_form" class="floatcar">
                         <div id="" class="floatcar1">
                             <div class="nopro">
                                 <p>购物车中暂无商品</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -874,9 +881,7 @@
                             <i>¥</i>
                             <span>89.9</span>
                        </div>
-                       <div class="p-btn">
-                           <a class="buy" href="#">加入购物车</a>
-                       </div>
+                       <button class="buy" href="#">加入购物车</button>
                    </li>
                    <li>
                         <div class="pic">
@@ -891,9 +896,7 @@
                              <i>¥</i>
                              <span>89.9</span>
                         </div>
-                        <div class="p-btn">
-                            <a class="buy" href="#">加入购物车</a>
-                        </div>
+                        <button class="buy" href="#">加入购物车</button>
                     </li>
                     <li>
                         <div class="pic">
@@ -908,9 +911,7 @@
                                 <i>¥</i>
                                 <span>89.9</span>
                         </div>
-                        <div class="p-btn">
-                            <a class="buy" href="#">加入购物车</a>
-                        </div>
+                        <button class="buy" href="#">加入购物车</button>
                     </li>
                     <li>
                         <div class="pic">
@@ -925,9 +926,7 @@
                                 <i>¥</i>
                                 <span>89.9</span>
                         </div>
-                        <div class="p-btn">
-                            <a class="buy" href="#">加入购物车</a>
-                        </div>
+                        <button class="buy" href="#">加入购物车</button>
                     </li>
                 </ul>
             </div>
@@ -1038,6 +1037,7 @@
         </div>
     </div>
     <script src="js/jquery.js"></script>
-    <script src="js/activity.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <script src="js/gouwu.js"></script>
 </body>
 </html>
